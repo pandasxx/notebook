@@ -1,0 +1,138 @@
+validate
+
+ASCUS	:	244/297      	recall:	0.8215488215488216
+LSIL		:	257/279      	recall:	0.921146953405018
+ASCH	:	61/99      		recall:	0.6161616161616161
+HSIL		:	160/275      	recall:	0.5818181818181818
+SCC		:	51/78      		recall:	0.6538461538461539
+AGC1	:	52/59      		recall:	0.8813559322033898
+AGC2	:	26/27      		recall:	0.9629629629629629
+ADC		:	40/53      		recall:	0.7547169811320755
+EC		:	9/10      		recall:	0.9
+FUNGI	:	39/43      		recall:	0.9069767441860465
+TRI		:	7/18      		recall:	0.3888888888888889
+CC		:	0/256      		recall:	0.0
+ACTINO	:	139/144      	recall:	0.9652777777777778
+VIRUS	:	51/55      		recall:	0.9272727272727272
+
+test
+
+ASCUS	:	88/110      	recall:	0.8
+LSIL		:	360/397      	recall:	0.906801007556675
+ASCH	:	9/10      		recall:	0.9
+HSIL		:	12/23      		recall:	0.5217391304347826
+SCC		:	33/90      		recall:	0.36666666666666664
+AGC1	:	0/0      		recall:	0
+AGC2	:	0/0      		recall:	0
+ADC		:	0/0      		recall:	0
+EC		:	60/62      		recall:	0.967741935483871
+FUNGI	:	23/31      		recall:	0.7419354838709677
+TRI		:	12/34      		recall:	0.35294117647058826
+CC		:	0/59      		recall:	0.0
+ACTINO	:	85/90      		recall:	0.9444444444444444
+VIRUS	:	0/0      		recall:	0
+
+test2
+
+ASCUS	:	248/801      	recall:	0.3096129837702871
+LSIL		:	807/1593     	recall:	0.5065913370998116
+ASCH	:	5/55      		recall:	0.09090909090909091
+HSIL		:	0/1      		recall:	0.0
+SCC		:	0/0      		recall:	0
+AGC1	:	0/0      		recall:	0
+AGC2	:	0/0      		recall:	0
+ADC		:	0/0      		recall:	0
+EC		:	3/3      		recall:	1.0
+FUNGI	:	1/17      		recall:	0.058823529411764705
+TRI		:	0/0      		recall:	0
+CC		:	0/91      		recall:	0.0
+ACTINO	:	0/0      		recall:	0
+VIRUS	:	0/0      		recall:	0
+
+#####
+#14类#
+#####
+
+*********************************************************************
+第五次实验
+
+	使用2w个样本训练（bigtest 4）
+
+	标记方法：
+		标记了所有的细胞类型
+		共14类
+		数据不平衡（3000 vs 300）
+		使用最老版本数据（数据多，但为大图标记，多为单类标记忽略其他，且有可能单类也没标标全）
+
+	数据描述
+		train 和 valid 来自同一批tif切分
+		test来自另外一批tif切分
+		test2来自不同批次，不同标注方法的tiff
+
+		train 有四个方向的旋转数据增强，另外有45度的随机旋转
+
+	10000次迭代后
+		1 valid 和 test 可以识别出大部分细胞（除 CC TRI等效果不好，test有些没有样本）
+		2 但test2效果不好
+
+结论
+
+	不太严重的样本不平衡可以接受
+	同批次不同tif不太会影响性能
+	但不同批次会影响性能（可能是不同时期扫描的数据的概率分布有区别，或者医生标注习惯不一）
+
+	即泛用性不好
+
+********************************************************************
+
+
+vali
+
+ASCUS	:	231/297      	recall:	0.7777777777777778
+LSIL		:	246/279      	recall:	0.8817204301075269
+ASCH	:	72/99      		recall:	0.7272727272727273
+HSIL		:	249/275      	recall:	0.9054545454545454
+SCC		:	44/78      		recall:	0.5641025641025641
+AGC1	:	51/59      		recall:	0.864406779661017
+AGC2	:	24/27      		recall:	0.8888888888888888
+ADC		:	44/53    	  	recall:	0.8301886792452831
+EC		:	10/10    	  	recall:	1.0
+FUNGI	:	32/43   	   	recall:	0.7441860465116279
+TRI		:	9/18      		recall:	0.5
+CC		:	0/256    	  	recall:	0.0
+ACTINO	:	139/144      	recall:	0.9652777777777778
+VIRUS	:	48/55    	  	recall:	0.8727272727272727
+
+test
+
+ASCUS	:	79/110      	recall:	0.7181818181818181
+LSIL		:	343/397      	recall:	0.8639798488664987
+ASCH	:	6/10      		recall:	0.6
+HSIL		:	7/23      		recall:	0.30434782608695654
+SCC		:	30/90      		recall:	0.3333333333333333
+AGC1	:	0/0      		recall:	0
+AGC2	:	0/0      		recall:	0
+ADC		:	0/0      		recall:	0
+EC		:	59/62      		recall:	0.9516129032258065
+FUNGI	:	23/31      		recall:	0.7419354838709677
+TRI		:	9/34      		recall:	0.2647058823529412
+CC		:	0/59      		recall:	0.0
+ACTINO	:	85/90      		recall:	0.9444444444444444
+VIRUS	:	0/0      		recall:	0
+
+test2
+
+ASCUS	:	200/801      	recall:	0.24968789013732834
+LSIL		:	732/1593      	recall:	0.4595103578154426
+ASCH	:	3/55      		recall:	0.05454545454545454
+HSIL		:	0/1      		recall:	0.0
+SCC		:	0/0      		recall:	0
+AGC1	:	0/0      		recall:	0
+AGC2	:	0/0      		recall:	0
+ADC		:	0/0      		recall:	0
+EC		:	3/3      		recall:	1.0
+FUNGI	:	2/17      		recall:	0.11764705882352941
+TRI		:	0/0      		recall:	0
+CC		:	0/91      		recall:	0.0
+ACTINO	:	0/0      		recall:	0
+VIRUS	:	0/0      		recall:	0

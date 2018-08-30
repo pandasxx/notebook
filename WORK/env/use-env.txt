@@ -1,0 +1,24 @@
+服务器地址（用于ssh登陆，xbroser可视化登陆）
+	192.168.1.150
+	tsimage001
+	tsimage001
+
+
+smb地址（用于和服务器共享文件）
+	192.168.1.150\Home Share
+	sakulaki
+	123
+
+远程启动jupyter notebook
+	1 使用xshell或者xbrowser，在服务器启动anaconda环境以及jupyternotebook
+	2 在win10本地使用edge浏览器打开http://192.168.1.150:8000/ 即可
+
+开发方式
+	1 使用sublime在smb共享区操作代码
+	2 使用jupyter notebook远程运行代码
+	3 都在本地执行
+
+
+
+
+$ watch -n 1 nvidia-smi

@@ -1,0 +1,44 @@
+conda install scipy h5py
+
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/  
+conda config --set show_channel_urls yes  
+
+创建环境
+	conda create -n tensorflow-base python=3.5
+
+激活环境
+	source activate tensorflow-base
+
+退出环境
+	source deactivate
+
+复制环境
+	conda create -n dst --clone src
+
+	https://blog.csdn.net/weixin_37251044/article/details/79766732
+
+删除环境
+	conda remove -n dst --all
+
+
+查看版本
+
+	cuda 版本 （9.0.176）
+	cat /usr/local/cuda/version.txt
+
+	cudnn 版本 （7.03）
+	cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
+
+notebook 主题
+	
+	pip install jupyterthemes
+
+	jt -t chesterish
+
+	jt -f inconsolata -t chesterish
+
+
+jupyter 远程
+
+

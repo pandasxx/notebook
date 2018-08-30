@@ -1,0 +1,20 @@
+可视化服务器连接（XCMDP）
+	安装 xfce
+	修改 xcmdp 配置文件
+
+	解决登陆后闪退问题 https://www.ubuntukylin.com/ukylin/forum.php?mod=viewthread&tid=26053
+
+Samba服务搭建
+	...
+	sudo smbpasswd -a sakulaki
+
+anaconda环境
+	...
+
+jupyter远程环境
+	https://www.jianshu.com/p/4012f7149eb8?from=timeline
+
+
+sha1:9b3d7672d7b5:826e5c1524ff1c1a2a6700a962a23f408bfc4446
+
+sha1:797b7a13fc43:ee5c1a5250c9850189069c9684262864238dab3b
